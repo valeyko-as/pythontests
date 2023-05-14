@@ -1,2 +1,2 @@
 # pythontests
-[![valeyko-as](https://circleci.com/gh/valeyko-as/pythontests.svg?style=svg)](https://app.circleci.com/pipelines/github/valeyko-as/pythontests?branch=circleci-project-setup&filter=all)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/valeyko-as/pythontests/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/valeyko-as/pythontests/tree/main)
