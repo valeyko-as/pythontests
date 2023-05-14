@@ -12,11 +12,13 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - run: python manage.py tests.unit
+      - run: python manage.py makemigrations && python manage.py migrate
 
-      - run: python manage.py tests.integrate
+      - run: python manage.py test tests.unit
 
-      - run: python manage.py tests.system
+      - run: python manage.py test tests.integrate
+
+      - run: python manage.py test tests.system
 
 workflows:
   version: 2
