@@ -1,0 +1,25 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.9
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - run: pip install -r reqs.txt
+
+      - run: python manage.py tests.unit
+
+      - run: python manage.py tests.integrate
+
+      - run: python manage.py tests.system
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build
