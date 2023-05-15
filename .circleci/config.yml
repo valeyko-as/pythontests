@@ -23,18 +23,18 @@ jobs:
 
 workflows:
   version: 2
-  build:
+  build-and-test:
       jobs:
         - build:
 
-      triggers:
-        - schedule:
-            cron: "55 12 * * 1"  # Запуск в 12:55 каждого понедельника
-            filters:
-              branches:
-                only:
-                  - main  # Запуск только на ветке master
-        - push:
-            branches:
-              only:
-                - main
+triggers:
+    - schedule:
+        cron: "55 12 * * 1"  # Запуск в 12:55 каждого понедельника
+        filters:
+          branches:
+            only:
+              - main  # Запуск только на ветке master
+    - push:
+        branches:
+          only:
+            - main  # Запуск только на ветке master
