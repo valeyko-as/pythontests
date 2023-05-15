@@ -24,13 +24,9 @@ workflows:
   version: 2
   build:
     jobs:
-      - tests
-      
-workflows:
-  version: 2
-  build:
-    triggers:
-      - schedule:
+      - test
+        triggers:
+          - schedule:
           cron: "50 9 * * 1"  # Запуск в 12:55 каждого понедельника
           filters:
             branches:
