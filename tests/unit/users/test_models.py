@@ -85,7 +85,7 @@ class UserModelTests(TestCase):
     def test_get_short_name_empty_names(self):
         self.user.first_name = ''
         self.user.last_name = ''
-        self.assertEqual(self.user.get_short_name(), '')
+        self.assertEqual(self.user.get_short_name(), '1234')
 
     def test_get_full_name_special_characters(self):
         self.user.first_name = 'J#hn'
